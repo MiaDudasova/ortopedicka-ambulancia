@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Header from "./components/layout/Header";
 import Head from "next/head";
 import React from "react";
+import Footer from "./components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <title>Ortopedická ambulancia</title>
-        <link rel="shortcut icon" type="image/png" href="./logos.png" />
+        <link rel="shortcut icon" type="image/png" href="/logos.png" />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css"
@@ -29,6 +30,7 @@ export default function RootLayout({
         <React.StrictMode>
           <Header />
           {children}
+          <Footer />
         </React.StrictMode>
       </body>
     </html>
