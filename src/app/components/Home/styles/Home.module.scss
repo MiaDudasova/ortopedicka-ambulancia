@@ -1,0 +1,163 @@
+.ortopedickaAmbulancia {
+  width: 100%;
+  height: 100%;
+  max-height: 82vh;
+  min-height: 82vh;
+  display: flex;
+
+  .imageWrapper {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .image {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 62% 29% 39% 60% / 51% 35% 65% 39%;
+    }
+  }
+
+  .socialsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 5%;
+    margin: 0px 25px;
+
+    .socials {
+      max-width: 80%;
+      height: fit-content;
+      margin: auto 0px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social {
+      width: 100%;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  .textWrapper {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .text {
+      width: fit-content;
+      height: fit-content;
+
+      h1 {
+        margin-bottom: 5px;
+        font-size: 2vw;
+      }
+      h4 {
+        font-style: italic;
+        margin: 10px 0px;
+        font-size: 1.1vw;
+      }
+      ul {
+        font-style: italic;
+        font-size: 1.1vw;
+      }
+      .novinka {
+        font-weight: bolder;
+        color: #a80c6d;
+      }
+      .cennik {
+        color: #a80c6d;
+        text-decoration: underline;
+      }
+
+      a {
+        text-decoration: none;
+        color: #17356c;
+        font-weight: 600;
+      }
+
+      h3 {
+        font-size: 1.3vw;
+      }
+
+      .contactsWrapper {
+        font-weight: 600;
+        font-size: 1.1vw;
+      }
+
+      .contacts {
+        font-style: italic;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .ortopedickaAmbulancia {
+    .imageWrapper {
+      .image {
+        height: 65%;
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .ortopedickaAmbulancia {
+    .imageWrapper {
+      display: none;
+      .image {
+        width: 95%;
+      }
+    }
+    .textWrapper {
+      margin-left: 0;
+      width: 90%;
+
+      .text {
+        h1 {
+          font-size: 4vh;
+        }
+        .contactsWrapper,
+        ul,
+        h4 {
+          font-size: 2.2vh;
+        }
+        h3 {
+          font-size: 2.4vh;
+        }
+      }
+    }
+    .socialsWrapper {
+      display: flex;
+    }
+  }
+}
+
+@media only screen and (max-width: 793px) {
+  .ortopedickaAmbulancia {
+    justify-content: center;
+    align-items: center;
+
+    .socialsWrapper {
+      display: none;
+    }
+    .textWrapper {
+      width: 100%;
+      padding: 35px 25px;
+
+      .text {
+        ul {
+          margin-left: -20px;
+        }
+      }
+    }
+  }
+}

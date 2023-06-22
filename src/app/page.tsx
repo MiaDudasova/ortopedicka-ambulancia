@@ -1,71 +1,118 @@
+"use client";
 import styles from "../app/styles/Home.module.scss";
 import Head from "next/head";
+import Home from "./components/Home/Home";
+import * as React from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
-const Home = () => {
+const Index = () => {
+  const [open, setOpen] = React.useState(false);
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.ortopedickaAmbulancia}>
-        <div className={styles.socialsWrapper}>
-          <div className={styles.socials}>
-            <img
-              src="./facebook.svg"
-              alt="Facebook Ortotické centrum"
-              className={styles.social}
-            />
-            <img
-              src="./web.svg"
-              alt="Websránka Ortotické centrum"
-              className={styles.social}
-              style={{ width: "70%", margin: "0px auto" }}
-            />
-          </div>
-        </div>
+      <div className={styles.ortopedickaAmbulancia} id="home">
+        <Home />
+      </div>
+
+      <div className={styles.razovaVlna}>
         <div className={styles.imageWrapper}>
           <img
-            src="./ambulancia.jpg"
-            alt="Ambulancia"
-            className={styles.image}
+            src="./shockmaster-500.png"
+            alt="ShockMaster 500"
+            className={styles.mainImage}
+          />
+          <div className={styles.sideImages}>
+            <img
+              src="shockmaster1.jpeg"
+              alt=""
+              onClick={() => setOpen(true)}
+              className={styles.image}
+              style={{ borderBottomLeftRadius: "15px" }}
+            />
+            <img
+              src="shockmaster3.jpeg"
+              alt=""
+              onClick={() => setOpen(true)}
+              className={styles.image}
+            />
+            <div className={styles.showMore} onClick={() => setOpen(true)}>
+              <img
+                src="shockmaster2.jpeg"
+                alt=""
+                style={{
+                  borderBottomRightRadius: "15px",
+                  width: "100%",
+                  height: "calc(100% - 0.83vh)",
+                }}
+                className={styles.image}
+              />
+              <div className={styles.filterShowMore}>+ 3</div>
+            </div>
+          </div>
+          <Lightbox
+            open={open}
+            close={() => setOpen(false)}
+            slides={[
+              { src: "/shockmaster1.jpeg" },
+              { src: "/shockmaster2.jpeg" },
+              { src: "/shockmaster3.jpeg" },
+            ]}
           />
         </div>
         <div className={styles.textWrapper}>
           <div className={styles.text}>
-            <h1>Ortopedická amulancia pre deti a dospelých</h1>
-            <h4>
-              V priestoroch nášho centra Vám bude k dispozícii ortopedická
-              ambulancia pre deti aj dospelých.
-            </h4>
-            <h4>
-              Ortopedická ambulancia je zameraná na diagnostiku a liečbu chorôb
-              pohybového aparátu.
-            </h4>
-            <div>
+            <h1>Terapia Rázovou vlnou</h1>
+            <p>
+              Moderné zariadenie, ktoré umožňuje aplikovať terapie pomocou{" "}
+              <span style={{ fontWeight: "bold" }}>
+                neinvazívnych rázových vĺn
+              </span>
+              , využívajúci balistický princíp generovania rázových vĺn.
+            </p>
+            <ul>
+              <li>
+                Zlepšuje funkciu nervových vlákien regulujúcu výživu a látkovú
+                premenu tkanív
+              </li>
+              <li>Zrychluje lokálny metabolizmus</li>
+              <li>Uvolňuje svaly</li>
+              <li>Zvyšuje</li>
               <ul>
-                <li>
-                  <span className={styles.novinka}>
-                    !!!! Aplikácia krvnej plazmy ACP !!!! NOVINKA
-                  </span>
-                </li>
-                <li>Diagnostika chodidiel detí a dospelých</li>
-                <li>Obmedzenie pohyblivosti</li>
-                <li>Bolesti chrbta a kĺbov</li>
-                <li>Deformácie a skrátenia končatín</li>
-                <li>Poúrazová a pooperačná ambulantná starostlivosť</li>
-                <li>
-                  Terapia detí s DMO a inými neuromuskulárnymi ochoreniami
-                </li>
+                <li>Mikrocirkuláciu krvi</li>
+                <li>Produkciu kolagénu</li>
               </ul>
-            </div>
-            <div className={styles.contactsWrapper}>
-              <h3>OHĽADOM TERMÍNU A POPLATKU SA INFORMUJTE !</h3>
-              <span className={styles.contacts}>Tel.:</span> 0908 446 496 <br />
-              <span className={styles.contacts}>Cenník:</span>{" "}
-              <a href="https://ortopedsamorin.sk/CENNIK_AMBULANCIA_Šamorín.pdf">
-                CENNÍK_AMBULANCIA_Šamorín
-              </a>{" "}
-              <br />
-              <span className={styles.contacts}>E-mail:</span>{" "}
-              info@ortotickecentrum.sk <br />
-            </div>
+              <li>Znižuje</li>
+              <ul>
+                <li>Lokálny pocit bolesti</li>
+                <li>Svalové pnutie</li>
+              </ul>
+            </ul>
+            <p>
+              Využíva{" "}
+              <span style={{ fontWeight: "bold" }}>
+                akustické vlny na účely stimulácie lokálnej biologickej odozvy
+                ošetrovaného tkaniva
+              </span>
+              . Pomáha pacientom najmä pri bolestiach alebo zápaloch.
+            </p>
+            <ul>
+              <li>Ochorenia šliach a úponov</li>
+              <li>Kalcifikáty</li>
+              <li>Riešenie bolesti z preťaženia</li>
+              <ul>
+                <li>Tenisový lakeť</li>
+                <li>Pätová ostroha</li>
+                <li>Zápaly Achillovej šľachy</li>
+              </ul>
+            </ul>
+            <h4 style={{ wordWrap: "break-word", overflowWrap: "break-word" }}>
+              Upozornenie: Nie je možné použiť rázovú vlnu v prípade
+              tehotenstva, zníženej zrážanlivosť krvi, trombózy alebo u detí v
+              období rastu. Výsledný efekt pacient pociťuje po pár týždňoch
+              absolvovania terapie, teda je k nej potrebné pristupovať
+              zodpovedne a zúčastniť sa jej pravidelne.
+            </h4>
           </div>
         </div>
       </div>
@@ -73,4 +120,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Index;
