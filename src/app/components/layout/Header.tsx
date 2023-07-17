@@ -39,7 +39,14 @@ const Header = () => {
         <div className={styles.navbar}>
           <div className={`${styles.navbarItems} ${isOpen ? styles.open : ""}`}>
             <li className={styles.navbarItem}>Rázová vlna</li>
-            <li className={styles.navbarItem}>Cenník</li>
+            <li className={styles.navbarItem}>
+              <a
+                href="https://ortopedsamorin.sk/CENNIK_AMBULANCIA_Šamorín.pdf"
+                className={styles.navbarItemLink}
+              >
+                Cenník
+              </a>
+            </li>
             <li className={styles.navbarItem}>Kontakt</li>
           </div>
           <img
