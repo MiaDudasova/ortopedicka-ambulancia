@@ -6,6 +6,16 @@
   display: flex;
   flex-direction: column;
   margin-top: 12vh;
+  font-size: 1.1vw;
+
+  a {
+    color: #a80c6d;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.8vw;
+  }
 
   .kontakty {
     width: 100%;
@@ -17,11 +27,22 @@
 
     .imageWrapper {
       width: 50%;
-      height: 100%;
+      height: calc(100% - 6vh);
+      position: relative;
+      text-align: center;
 
       .image {
         width: 100%;
         height: 100%;
+      }
+
+      .mapa {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        text-decoration: underline;
+        color: #17356c;
+
       }
     }
 
@@ -29,38 +50,156 @@
       padding: 2vw;
       display: flex;
       flex-direction: column;
-      height: calc(100% - 6vh);
+      height: calc(100% - 13.5vh);
+      width: 50%;
+      justify-content: center;
 
       .kontakt {
-        margin: auto auto;
-
+        margin-left: 25%;
         .kontaktneInfo {
           display: flex;
           flex-direction: row;
+
+          .labels {
+            font-weight: bold;
+          }
 
           .info {
             margin-left: 1vw;
           }
         }
+      }
+      .ordinacneHodiny {
+        width: 75%;
+        margin-left: 25%;
 
-        .ordinacneHodiny {
-          width: 100%;
+        .hodiny {
+          display: flex;
+          flex-direction: row;
+          min-width: fit-content;
 
-          .hodiny {
-            display: flex;
-            flex-direction: row;
-            min-width: fit-content;
-
-            .otvaracieHodiny,
-            .do,
-            .zatvaracieHodiny,
-            .obed,
-            .otvaracieHodinyObed,
-            .doObed,
-            .zatvaracieHodinyObed {
-              margin-left: 1vw;
-            }
+          .dni {
+            font-weight: bold;
           }
+
+          .otvaracieHodiny,
+          .do,
+          .zatvaracieHodiny,
+          .obed,
+          .otvaracieHodinyObed,
+          .doObed,
+          .zatvaracieHodinyObed {
+            margin-left: 1vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1435px) {
+  .wrapper {
+    .kontakty {
+      .imageWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .image {
+          width: 100%;
+          height: auto;
+          margin-left: 15%;
+        }
+
+        .mapa {
+          display: flex;
+          margin-top: 5px;
+          position: unset;
+          top: 0px;
+          right: 0px;
+        }
+      }
+      .kontaktWrapper {
+        margin: auto 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 865px) {
+  .wrapper {
+    .kontakty {
+      display: flex;
+      flex-direction: column;
+
+      font-size: 1.7vh;
+
+      h2 {
+        font-size: 2.8vh;
+      }
+
+      .imageWrapper {
+        width: 100%;
+        height: 60%;
+
+        .image {
+          width: auto;
+          height: 100%;
+          margin: 0px;
+        }
+      }
+
+      .kontaktWrapper {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+
+        .kontaktOrdinacne {
+          display: flex;
+          flex-direction: row-reverse;
+          .kontakt {
+            width: fit-content;
+            margin: 0px;
+          }
+
+          .ordinacneHodiny {
+            width: fit-content;
+            margin: 0px 10vw 0px 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 547px) {
+  .wrapper {
+    .kontakty {
+      .imageWrapper {
+        height: 35%;
+        width: 100%;
+
+        .image {
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      .kontaktWrapper {
+        width: 100%;
+        height: 65%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 6vh;
+
+        .kontaktOrdinacne {
+          width: fit-content;
+          height: fit-content;
+          display: flex;
+          flex-direction: column;
         }
       }
     }
