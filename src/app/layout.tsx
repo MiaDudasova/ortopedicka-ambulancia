@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Ortopedická ambulancia",
+  icons: {
+    icon: "/logos.png",
+  },
 };
 
 export default function RootLayout({
@@ -17,10 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <Head>
         <title>Ortopedická ambulancia</title>
-        <link rel="shortcut icon" type="image/png" href="/logos.png" />
+        <link rel="icon" href="favicon.ico" sizes="any" />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css"
@@ -28,15 +31,12 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
         <React.StrictMode>
-          <Header />
           {children}
-          <Footer />
         </React.StrictMode>
       </body>
     </html>
   );
 }
 function useClient() {
-  throw new Error("Function not implemented.");
 }
 

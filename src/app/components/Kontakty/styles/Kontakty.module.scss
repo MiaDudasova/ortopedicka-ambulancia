@@ -1,0 +1,199 @@
+.kontakty {
+  width: 100%;
+  height: 100%;
+  min-height: 88vh;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+
+  a {
+    color: #a80c6d;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.8vw;
+  }
+
+  .imageWrapper {
+    width: 50%;
+    height: calc(100% - 6vh);
+    position: relative;
+    text-align: center;
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+
+    .mapa {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      text-decoration: underline;
+      color: #17356c;
+    }
+  }
+
+  .kontaktWrapper {
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 13.5vh);
+    width: 50%;
+    justify-content: center;
+
+    .kontakt {
+      margin-left: 25%;
+      .kontaktneInfo {
+        display: flex;
+        flex-direction: row;
+
+        .labels {
+          font-style: italic;
+        }
+
+        .info {
+          margin-left: 1vw;
+        }
+      }
+    }
+    .ordinacneHodiny {
+      width: 75%;
+      margin-left: 25%;
+
+      .hodiny {
+        display: flex;
+        flex-direction: row;
+        min-width: fit-content;
+
+        .dni {
+          font-weight: bold;
+        }
+
+        .otvaracieHodiny,
+        .do,
+        .zatvaracieHodiny,
+        .obed,
+        .otvaracieHodinyObed,
+        .doObed,
+        .zatvaracieHodinyObed {
+          margin-left: 1vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1435px) {
+  .kontakty {
+    .imageWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .image {
+        width: 100%;
+        height: auto;
+        margin-left: 15%;
+      }
+
+      .mapa {
+        display: flex;
+        margin-top: 5px;
+        position: unset;
+        top: 0px;
+        right: 0px;
+      }
+    }
+    .kontaktWrapper {
+      margin: auto 0px;
+    }
+  }
+}
+
+@media (max-width: 865px) {
+  .kontakty {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.7vh;
+
+    h2 {
+      font-size: 2.8vh;
+    }
+
+    .imageWrapper {
+      width: 100%;
+      height: 65%;
+
+      .image {
+        min-width: 43%;
+        margin: 0px;
+        max-width: 60%;
+        max-height: 90%;
+      }
+    }
+
+    .kontaktWrapper {
+      width: 100%;
+      height: 40%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      padding: 0px;
+
+      .kontaktOrdinacne {
+        display: flex;
+        flex-direction: row-reverse;
+        .kontakt {
+          width: fit-content;
+          margin: 0px;
+        }
+
+        .ordinacneHodiny {
+          width: fit-content;
+          margin: 0px 10vw 0px 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 565px) {
+  .kontakty {
+    max-height: 88vh;
+    .imageWrapper {
+      height: 45%;
+      width: 100%;
+
+      .image {
+        height: 100%;
+        max-width: 100%;
+        width: auto;
+        margin-top: 1vh;
+      }
+    }
+
+    .kontaktWrapper {
+      width: 100%;
+      height: 55%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 6vh;
+
+      .kontaktOrdinacne {
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin-top: -1vh;
+
+        .ordinacneHodiny {
+          margin: 0px;
+        }
+      }
+    }
+  }
+}

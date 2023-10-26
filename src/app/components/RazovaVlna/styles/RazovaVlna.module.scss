@@ -63,49 +63,125 @@
       font-size: 2vh;
       margin-bottom: 6vh;
 
-      h1 {
-        font-size: 4vh;
+      .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        h1 {
+          font-size: 4vh;
+          margin: 0px;
+        }
+
+        .button {
+          display: none;
+          margin-left: 1vw;
+          width: 16vw;
+          height: 2.5vh;
+          padding: 10px 15px;
+          border-radius: 15px;
+          background-color: #a80c6d;
+          color: white;
+          margin-left: 1vw;
+
+          img {
+            height: 100%;
+            aspect-ratio: 1/1;
+          }
+        }
       }
     }
   }
 }
 
 @media (max-width: 1000px) {
-  .wrapper {
-    .razovaVlna {
-      .imageWrapper {
-        width: 40%;
+  .razovaVlna {
+    .imageWrapper {
+      width: 40%;
 
-        .mainImage {
-          width: 65%;
-        }
+      .mainImage {
+        width: 65%;
+      }
 
-        .sideImages {
-          width: 65%;
-        }
+      .sideImages {
+        width: 65%;
       }
     }
   }
 }
 
 @media (max-width: 836px) {
-  .wrapper {
-    .razovaVlna {
-      padding-top: 5vh;
-      .imageWrapper {
-        display: none;
+  .razovaVlna {
+    padding-top: 5vh;
+    .imageWrapper {
+      display: none;
+    }
+
+    .textWrapper {
+      width: 100%;
+      padding: 0px 25px;
+
+      .text {
+        margin-bottom: 12vh;
+
+        .header {
+          .button {
+            display: flex;
+          }
+        }
+
+        p {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
       }
+    }
+  }
+}
 
-      .textWrapper {
-        width: 100%;
-        padding: 0px 25px;
+@media (max-width: 665px) {
+  .razovaVlna {
+    .textWrapper {
+      .text {
+        .header {
+          .button {
+            width: 22vw;
+          }
+        }
+      }
+    }
+  }
+}
 
-        .text {
-          margin-bottom: 12vh;
+@media (max-width: 493px) {
+  .razovaVlna {
+    .textWrapper {
+      .text {
+        .header {
+          flex-direction: column;
 
-          p {
-            overflow-wrap: break-word;
-            word-wrap: break-word;
+          .button {
+            margin-top: 0.4vh;
+            width: 27vw;
+            min-width: calc(fit-content + 25px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 382px) {
+  .razovaVlna {
+    .textWrapper {
+      .text {
+        font-size: 1.95vh;
+        .header {
+          h1 {
+            font-size: 3.5vh;
+          }
+          .button {
+            width: 35vw;
           }
         }
       }

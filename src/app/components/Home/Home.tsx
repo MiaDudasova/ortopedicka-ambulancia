@@ -10,7 +10,7 @@ const Home = () => {
             target="_blank"
           >
             <img
-              src="./facebook.svg"
+              src="/icons/facebook.svg"
               alt="Facebook Ortotické centrum"
               className={styles.social}
             />
@@ -21,7 +21,7 @@ const Home = () => {
             style={{ display: "flex", justifyContent: "center" }}
           >
             <img
-              src="./web.svg"
+              src="/icons/web.svg"
               alt="Websránka Ortotické centrum"
               className={styles.social}
               style={{ width: "70%", margin: "0px auto" }}
@@ -30,7 +30,7 @@ const Home = () => {
         </div>
       </div>
       <div className={styles.imageWrapper}>
-        <img src="./ambulancia.jpg" alt="Ambulancia" className={styles.image} />
+        <img src="./images/ambulancia.jpg" alt="Ambulancia" className={styles.image} />
       </div>
       <div className={styles.textWrapper}>
         <div className={styles.text}>
@@ -43,7 +43,7 @@ const Home = () => {
             Ortopedická ambulancia je zameraná na diagnostiku a liečbu chorôb
             pohybového aparátu.
           </h4>
-          <div>
+          <div className={styles.list}>
             <ul>
               <li>
                 <span className={styles.novinka}>
@@ -63,14 +63,15 @@ const Home = () => {
             <span className={styles.contacts}>Tel.:</span> 0908 446 496 <br />
             <span className={styles.contacts}>Cenník:</span>{" "}
             <a
-              href="https://ortopedsamorin.sk/CENNIK_AMBULANCIA_Šamorín.pdf"
+              href="/files/CENNIK_AMBULANCIA_Šamorín.pdf"
               className={styles.cennik}
+              target="_blank"
             >
               CENNÍK_AMBULANCIA_Šamorín
             </a>{" "}
             <br />
             <span className={styles.contacts}>E-mail:</span>{" "}
-            <a href="mailto: info@ortotickecentrum.sk" target="_blank">
+            <a href="mailto: info@ortotickecentrum.sk" target="_blank" className={styles.mail}>
               info@ortotickecentrum.sk
             </a>
           </div>
